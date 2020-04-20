@@ -1,20 +1,24 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  RemindThings
 //
-//  Created by NganHa on 4/18/20.
+//  Created by NganHa on 4/19/20.
 //  Copyright © 2020 Galaxy. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
 
+    @IBOutlet weak var btnTodoList: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
+    
+    
+    
 
-
+  
 }
-
