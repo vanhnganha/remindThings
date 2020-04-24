@@ -8,7 +8,7 @@
 
 import UIKit
 import Firebase
-class LoginController: UIViewController{
+class SignInViewController: UIViewController{
     var data = ""
     @IBOutlet weak var passwordText: UITextField!{
     didSet {
@@ -42,7 +42,7 @@ class LoginController: UIViewController{
                 self!.present(alert, animated: true, completion: nil)
             }
         else {
-                self!.performSegue(withIdentifier: K.Segue.SignInToHome, sender: self)
+                self!.performSegue(withIdentifier: K.Segue.signInToHome, sender: self)
             }
         }
             

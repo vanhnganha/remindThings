@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class SignUpControllerViewController: UIViewController {
+class SignUpViewController: UIViewController {
 // MARK: IBOUlet
     @IBOutlet weak var password2Text: UITextField!{
     didSet{
@@ -51,6 +51,7 @@ class SignUpControllerViewController: UIViewController {
     //MARK: declare firestore
     let db = Firestore.firestore()
     var ref: DocumentReference? = nil
+    var accept = false
     //MARK: VIew did load
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,14 +98,15 @@ class SignUpControllerViewController: UIViewController {
             }
          else {
             self.saveNewInfor(newUser)
-            Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { (timer) in
-                DispatchQueue.main.async {
-                             self.performSegue(withIdentifier: K.Segue.SignUpToHome, sender: self)
-                         }
+            DispatchQueue.main.async {
+            self.performSegue(withIdentifier: K.Segue.signUpToHome, sender: self)
             }
-            }
+         }
+            
         }
+        
     }
+    
     func saveNewInfor(_ newUser: User){
         print("LƯU THÀNH CÔNG")
        ref = db.collection("user").addDocument(data: [
@@ -116,6 +118,7 @@ class SignUpControllerViewController: UIViewController {
                     print("Error adding document: \(err)")
                 } else {
                     self.alertSuccess()
+                    User.id = self.ref!.documentID
                     print("Document added with ID: \(self.ref!.documentID)")
                 }
     }
@@ -129,9 +132,9 @@ class SignUpControllerViewController: UIViewController {
        }
        
     func alertSuccess(){
-    let alert = UIAlertController(title: "Đăng ký thành công", message: "Bạn sẽ được chuyển đến trang chủ", preferredStyle: .alert)
-           let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-           alert.addAction(action)
-           present(alert, animated: true, completion: nil)
+    let alert = UIAlertController(title: "Đăng ký thành công", message: "Bạn đã được chuyển đến trang chủ", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
     }
 }
