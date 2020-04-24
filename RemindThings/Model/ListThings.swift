@@ -7,3 +7,11 @@
 //
 
 import Foundation
+import Firebase
+struct ListThings {
+    var id: String
+    var name: String
+    var idChild: String
+    
+    
+}

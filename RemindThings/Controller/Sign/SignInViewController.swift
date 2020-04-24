@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 class SignInViewController: UIViewController{
-    var data = ""
+    var appDel: AppDelegate? = UIApplication.shared.delegate as? AppDelegate
     @IBOutlet weak var passwordText: UITextField!{
     didSet {
        passwordText.tintColor = UIColor.lightGray
@@ -25,24 +25,44 @@ class SignInViewController: UIViewController{
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.title = "Đăng nhập"
     }
 
 
     @IBAction func signinPressed(_ sender: UIButton) {
+        if usernameText.text == nil || passwordText.text == nil {
+            let alertFail = UIAlertController(title: "Đăng nhập thất bại", message: "Bạn phải điền đầy đủ thông tin", preferredStyle: .alert)
+            present(alertFail, animated: true, completion: nil)
+            let when = DispatchTime.now() + 0.5
+            DispatchQueue.main.asyncAfter(deadline: when){
+               
+                alertFail.dismiss(animated: true, completion: nil)
+            }
+        
+        }
         if let email = usernameText.text, let password = passwordText.text{
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
             if error != nil {
-            let alert = UIAlertController(title: "Can not sign in", message: "Email or password is not corrected", preferredStyle: .alert)
+            let alertFail = UIAlertController(title: "Đăng nhập thất bại", message: "Email hoặc mật khẩu không chính xác", preferredStyle: .alert)
                 let action = UIAlertAction(title: "OK", style: .default) { (action) in
                     self!.usernameText.text = nil
                     self!.passwordText.text = nil
                 }
-                alert.addAction(action)
-                self!.present(alert, animated: true, completion: nil)
+                alertFail.addAction(action)
+                self!.present(alertFail, animated: true, completion: nil)
             }
         else {
-                self!.performSegue(withIdentifier: K.Segue.signInToHome, sender: self)
+                UserDefaults.standard.set(true, forKey: "isAuth")
+                UserDefaults.standard.synchronize()
+                let alert = UIAlertController(title: "Đăng nhập thành công", message: "", preferredStyle: .alert)
+                self?.present(alert, animated: true, completion: nil)
+                let when = DispatchTime.now() + 0.5
+                DispatchQueue.main.asyncAfter(deadline: when){
+                    // your code with delay
+                    alert.dismiss(animated: true, completion: {
+                        self?.appDel?.navigate()
+                    })
+                }
             }
         }
             
@@ -57,9 +77,9 @@ class SignInViewController: UIViewController{
     @IBAction func googlePressed(_ sender: UIButton) {
     }
     
-    @IBAction func signupPressed(_ sender: UIButton) {
-//        self.performSegue(withIdentifier: K.Segue.SignInToSignUp, sender: self)
-    }
+//    @IBAction func signupPressed(_ sender: UIButton) {
+////        self.performSegue(withIdentifier: K.Segue.SignInToSignUp, sender: self)
+//    }
    
   
    

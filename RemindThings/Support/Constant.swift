@@ -9,11 +9,7 @@
 import Foundation
 struct K{
     struct Segue {
-        static var StartToSignIn : String = "StartToSignIn"
-        static var SignInToSignUp = "SignInToSignUp"
-        static var SignInToHome = "SignInToHome"
-        static var SignUpToHome = "SignUpToHome"
-        static var HomeToListToDo = "HomeToListToDo"
+        static var homeToList = "HomeToList"
     }
     struct Icon {
         var login = "person-male"
@@ -22,6 +18,14 @@ struct K{
         var email = ""
         
     
+    }
+    struct ScreenName{
+        static var startScreen = "StartScreen"
+        static var homeScreen = "HomeScreen"
+        static var signUp = "SignUpScreen"
+        static var signIn = "SignInScreen"
+        static var TabBarController = "TabBarController"
+        
     }
 
 }

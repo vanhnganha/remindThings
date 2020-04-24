@@ -7,16 +7,44 @@
 //
 
 import UIKit
+import Firebase
 
 class SignOutControllerViewController: UIViewController {
 
+      var appDel: AppDelegate? = UIApplication.shared.delegate as? AppDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        alertSignOut()
         // Do any additional setup after loading the view.
     }
     
-
+    func alertSignOut(){
+        let alert = UIAlertController(title: "Bạn có muốn đăng xuất không ?", message: "", preferredStyle: .alert)
+        let actionYes = UIAlertAction(title: "OK", style: .default) { (actionYes) in
+            let firebaseAuth = Auth.auth()
+            do {
+              try firebaseAuth.signOut()
+            } catch let signOutError as NSError {
+              print ("Error signing out: %@", signOutError)
+            }
+            User.id = ""
+            UserDefaults.standard.set(false, forKey: "isAuth")
+            UserDefaults.standard.synchronize()
+            DispatchQueue.main.async {
+                self.appDel?.navigate()
+            }
+        }
+        let actionNo = UIAlertAction(title: "Huỷ", style: .default) { (actionNo) in
+           DispatchQueue.main.async {
+                          self.appDel?.navigate()
+                      }
+           
+        }
+        alert.addAction(actionYes)
+        alert.addAction(actionNo)
+        present(alert, animated: true, completion: nil)
+    
+    }
     /*
     // MARK: - Navigation
 

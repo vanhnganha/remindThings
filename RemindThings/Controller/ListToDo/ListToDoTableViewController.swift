@@ -7,9 +7,10 @@
 //
 
 import UIKit
-
+import Firebase
 class ListToDoTableViewController: UITableViewController {
-
+    
+    let db = Firestore.firestore()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,10 +23,10 @@ class ListToDoTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 0
+//    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -86,5 +87,9 @@ class ListToDoTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+  // MARK: FIREBASE/FIRESTORE
+    func load(){
+        
+    }
+    
 }

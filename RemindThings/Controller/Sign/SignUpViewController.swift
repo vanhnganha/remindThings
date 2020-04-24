@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 
 class SignUpViewController: UIViewController {
+    var appDel: AppDelegate? = UIApplication.shared.delegate as? AppDelegate
 // MARK: IBOUlet
     @IBOutlet weak var password2Text: UITextField!{
     didSet{
@@ -85,6 +86,7 @@ class SignUpViewController: UIViewController {
     }
    
     func createNewAccount(_ userEmail: String,_ userPassword: String,_ newUser: User) {
+    
         Auth.auth().createUser(withEmail: userEmail, password: userPassword) { authResult, error in
           if error != nil{
             if let e = error?.localizedDescription {
@@ -97,10 +99,8 @@ class SignUpViewController: UIViewController {
             }
             }
          else {
+           
             self.saveNewInfor(newUser)
-            DispatchQueue.main.async {
-            self.performSegue(withIdentifier: K.Segue.signUpToHome, sender: self)
-            }
          }
             
         }
@@ -117,24 +117,32 @@ class SignUpViewController: UIViewController {
                 if let err = err {
                     print("Error adding document: \(err)")
                 } else {
-                    self.alertSuccess()
                     User.id = self.ref!.documentID
                     print("Document added with ID: \(self.ref!.documentID)")
+                    UserDefaults.standard.set(true, forKey: "isAuth")
+                    UserDefaults.standard.synchronize()
+                    self.alertSuccess()
+                    
                 }
     }
     }
     // MARK: Alert
     func alertFail(with contentAlert: String){
            let alert = UIAlertController(title: "Đăng ký thất bại", message: contentAlert, preferredStyle: .alert)
-           let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-           alert.addAction(action)
-           present(alert, animated: true, completion: nil)
-       }
-       
-    func alertSuccess(){
-    let alert = UIAlertController(title: "Đăng ký thành công", message: "Bạn đã được chuyển đến trang chủ", preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
+          
+       }
+       
+    func alertSuccess(){
+    let alert = UIAlertController(title: "Đăng ký thành công", message: "", preferredStyle: .alert)
+        present(alert, animated: true, completion: nil)
+        let when = DispatchTime.now() + 0.5
+        DispatchQueue.main.asyncAfter(deadline: when) {
+            alert.dismiss(animated: true) {
+                self.appDel?.navigate()
+            }
+        }
     }
 }
