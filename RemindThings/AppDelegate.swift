@@ -13,6 +13,11 @@ import Firebase
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    var window: UIWindow?
+    
+    let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+    
+    var navigationController: UINavigationController?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -21,7 +26,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         let db = Firestore.firestore()
         print(db)
+         navigate()
         return true
+    }
+    
+    func navigate() {
+    let isCheck = UserDefaults.standard.bool(forKey: "isAuth")
+        var rootVC : UIViewController?
+        window = UIWindow(frame: UIScreen.main.bounds)
+        if isCheck {
+            rootVC = storyboard.instantiateViewController(withIdentifier: K.ScreenName.homeScreen) as! HomeViewController
+        }else{
+            rootVC = storyboard.instantiateViewController(withIdentifier: K.ScreenName.TabBarController) as! TabBarControllerViewController
+        }
+        self.navigationController = UINavigationController(rootViewController:rootVC!)
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
     }
 
     // MARK: UISceneSession Lifecycle

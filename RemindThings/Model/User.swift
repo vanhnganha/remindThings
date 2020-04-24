@@ -8,6 +8,7 @@
 
 import Foundation
 public struct User {
+    static var id: String = ""
     var username: String
     var phone: String
     var address: String

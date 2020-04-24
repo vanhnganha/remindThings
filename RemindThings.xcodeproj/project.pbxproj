@@ -3,27 +3,61 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		521EFD75244C3BAA00C52A2B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 521EFD74244C3BAA00C52A2B /* GoogleService-Info.plist */; };
 		522B3746244B40D100DAC17C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B3745244B40D100DAC17C /* AppDelegate.swift */; };
 		522B3748244B40D100DAC17C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B3747244B40D100DAC17C /* SceneDelegate.swift */; };
-		522B374A244B40D100DAC17C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B3749244B40D100DAC17C /* ViewController.swift */; };
+		522B374A244B40D100DAC17C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B3749244B40D100DAC17C /* SignInViewController.swift */; };
 		522B374D244B40D100DAC17C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 522B374B244B40D100DAC17C /* Main.storyboard */; };
 		522B374F244B40D500DAC17C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 522B374E244B40D500DAC17C /* Assets.xcassets */; };
 		522B3752244B40D500DAC17C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 522B3750244B40D500DAC17C /* LaunchScreen.storyboard */; };
+		522B375A244C089600DAC17C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B3759244C089600DAC17C /* Constant.swift */; };
+		522B375D244C0ABE00DAC17C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B375C244C0ABE00DAC17C /* SignUpViewController.swift */; };
+		522B375F244C16EF00DAC17C /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B375E244C16EF00DAC17C /* StartViewController.swift */; };
+		526135DC244C4C8C00B00916 /* ExtensionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526135DB244C4C8C00B00916 /* ExtensionController.swift */; };
+		526135DE244C523B00B00916 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526135DD244C523B00B00916 /* HomeViewController.swift */; };
+		52B4633F2452D5AA006DA775 /* TabBarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4633E2452D5AA006DA775 /* TabBarControllerViewController.swift */; };
+		52B4AF0D244D390E0001924D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4AF0C244D390E0001924D /* User.swift */; };
+		52B4AF12244D443E0001924D /* CheckData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4AF11244D443E0001924D /* CheckData.swift */; };
+		52B4AF17244EE5610001924D /* CustomCellListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4AF15244EE5610001924D /* CustomCellListTableViewCell.swift */; };
+		52B4AF18244EE5610001924D /* CustomCellListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52B4AF16244EE5610001924D /* CustomCellListTableViewCell.xib */; };
+		52B4AF1B244EEB460001924D /* ListToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4AF1A244EEB460001924D /* ListToDoTableViewController.swift */; };
+		52B4AF1E244EEBE30001924D /* ListThings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4AF1D244EEBE30001924D /* ListThings.swift */; };
+		52B4AF21244FE2DB0001924D /* SignOutControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4AF20244FE2DB0001924D /* SignOutControllerViewController.swift */; };
+		52B4AF23244FF30E0001924D /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4AF22244FF30E0001924D /* SettingViewController.swift */; };
+		A3DEA827CD7C681AD373CBCD /* Pods_RemindThings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C63D8091355DE68187D7CF /* Pods_RemindThings.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B26141B27F493C04AFA67E1 /* Pods-RemindThings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemindThings.debug.xcconfig"; path = "Target Support Files/Pods-RemindThings/Pods-RemindThings.debug.xcconfig"; sourceTree = "<group>"; };
+		521EFD74244C3BAA00C52A2B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		522B3742244B40D100DAC17C /* RemindThings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemindThings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		522B3745244B40D100DAC17C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		522B3747244B40D100DAC17C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		522B3749244B40D100DAC17C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		522B3749244B40D100DAC17C /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		522B374C244B40D100DAC17C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		522B374E244B40D500DAC17C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		522B3751244B40D500DAC17C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		522B3753244B40D500DAC17C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		522B3759244C089600DAC17C /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		522B375C244C0ABE00DAC17C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		522B375E244C16EF00DAC17C /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		526135DB244C4C8C00B00916 /* ExtensionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionController.swift; sourceTree = "<group>"; };
+		526135DD244C523B00B00916 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		52B4633E2452D5AA006DA775 /* TabBarControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerViewController.swift; sourceTree = "<group>"; };
+		52B4AF0C244D390E0001924D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		52B4AF11244D443E0001924D /* CheckData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckData.swift; sourceTree = "<group>"; };
+		52B4AF15244EE5610001924D /* CustomCellListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellListTableViewCell.swift; sourceTree = "<group>"; };
+		52B4AF16244EE5610001924D /* CustomCellListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCellListTableViewCell.xib; sourceTree = "<group>"; };
+		52B4AF1A244EEB460001924D /* ListToDoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListToDoTableViewController.swift; sourceTree = "<group>"; };
+		52B4AF1D244EEBE30001924D /* ListThings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListThings.swift; sourceTree = "<group>"; };
+		52B4AF20244FE2DB0001924D /* SignOutControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutControllerViewController.swift; sourceTree = "<group>"; };
+		52B4AF22244FF30E0001924D /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		D6C63D8091355DE68187D7CF /* Pods_RemindThings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RemindThings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9AF1B53BEB7E461B080B45B /* Pods-RemindThings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemindThings.release.xcconfig"; path = "Target Support Files/Pods-RemindThings/Pods-RemindThings.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +65,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3DEA827CD7C681AD373CBCD /* Pods_RemindThings.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F55A6E643AF25FAB65DFE07 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3B26141B27F493C04AFA67E1 /* Pods-RemindThings.debug.xcconfig */,
+				D9AF1B53BEB7E461B080B45B /* Pods-RemindThings.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		2D7373FDC421E001B751EE98 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D6C63D8091355DE68187D7CF /* Pods_RemindThings.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		522B3739244B40D100DAC17C = {
 			isa = PBXGroup;
 			children = (
 				522B3744244B40D100DAC17C /* RemindThings */,
+				521EFD74244C3BAA00C52A2B /* GoogleService-Info.plist */,
 				522B3743244B40D100DAC17C /* Products */,
+				1F55A6E643AF25FAB65DFE07 /* Pods */,
+				2D7373FDC421E001B751EE98 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +113,75 @@
 			children = (
 				522B3745244B40D100DAC17C /* AppDelegate.swift */,
 				522B3747244B40D100DAC17C /* SceneDelegate.swift */,
-				522B3749244B40D100DAC17C /* ViewController.swift */,
-				522B374B244B40D100DAC17C /* Main.storyboard */,
+				52B4AF0E244D391B0001924D /* Model */,
+				522B375B244C0A7F00DAC17C /* Controller */,
+				52B4AF0F244D392A0001924D /* View */,
 				522B374E244B40D500DAC17C /* Assets.xcassets */,
-				522B3750244B40D500DAC17C /* LaunchScreen.storyboard */,
 				522B3753244B40D500DAC17C /* Info.plist */,
+				52B4AF10244D39370001924D /* Support */,
 			);
 			path = RemindThings;
+			sourceTree = "<group>";
+		};
+		522B375B244C0A7F00DAC17C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				52B4AF1F244FE2AA0001924D /* Sign */,
+				52B4AF19244EEB1B0001924D /* ListToDo */,
+				522B375E244C16EF00DAC17C /* StartViewController.swift */,
+				526135DB244C4C8C00B00916 /* ExtensionController.swift */,
+				526135DD244C523B00B00916 /* HomeViewController.swift */,
+				52B4AF22244FF30E0001924D /* SettingViewController.swift */,
+				52B4633E2452D5AA006DA775 /* TabBarControllerViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		52B4AF0E244D391B0001924D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				52B4AF0C244D390E0001924D /* User.swift */,
+				52B4AF11244D443E0001924D /* CheckData.swift */,
+				52B4AF1D244EEBE30001924D /* ListThings.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		52B4AF0F244D392A0001924D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				522B374B244B40D100DAC17C /* Main.storyboard */,
+				522B3750244B40D500DAC17C /* LaunchScreen.storyboard */,
+				52B4AF15244EE5610001924D /* CustomCellListTableViewCell.swift */,
+				52B4AF16244EE5610001924D /* CustomCellListTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		52B4AF10244D39370001924D /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				522B3759244C089600DAC17C /* Constant.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		52B4AF19244EEB1B0001924D /* ListToDo */ = {
+			isa = PBXGroup;
+			children = (
+				52B4AF1A244EEB460001924D /* ListToDoTableViewController.swift */,
+			);
+			path = ListToDo;
+			sourceTree = "<group>";
+		};
+		52B4AF1F244FE2AA0001924D /* Sign */ = {
+			isa = PBXGroup;
+			children = (
+				522B375C244C0ABE00DAC17C /* SignUpViewController.swift */,
+				522B3749244B40D100DAC17C /* SignInViewController.swift */,
+				52B4AF20244FE2DB0001924D /* SignOutControllerViewController.swift */,
+			);
+			path = Sign;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +191,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 522B3756244B40D500DAC17C /* Build configuration list for PBXNativeTarget "RemindThings" */;
 			buildPhases = (
+				849D91D2E6280B53594205D4 /* [CP] Check Pods Manifest.lock */,
 				522B373E244B40D100DAC17C /* Sources */,
 				522B373F244B40D100DAC17C /* Frameworks */,
 				522B3740244B40D100DAC17C /* Resources */,
+				52690121023C2CA47CFAC7BE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,6 +245,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				522B3752244B40D500DAC17C /* LaunchScreen.storyboard in Resources */,
+				52B4AF18244EE5610001924D /* CustomCellListTableViewCell.xib in Resources */,
+				521EFD75244C3BAA00C52A2B /* GoogleService-Info.plist in Resources */,
 				522B374F244B40D500DAC17C /* Assets.xcassets in Resources */,
 				522B374D244B40D100DAC17C /* Main.storyboard in Resources */,
 			);
@@ -133,14 +254,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		52690121023C2CA47CFAC7BE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RemindThings/Pods-RemindThings-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RemindThings/Pods-RemindThings-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RemindThings/Pods-RemindThings-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		849D91D2E6280B53594205D4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RemindThings-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		522B373E244B40D100DAC17C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				522B374A244B40D100DAC17C /* ViewController.swift in Sources */,
+				52B4AF21244FE2DB0001924D /* SignOutControllerViewController.swift in Sources */,
+				522B374A244B40D100DAC17C /* SignInViewController.swift in Sources */,
 				522B3746244B40D100DAC17C /* AppDelegate.swift in Sources */,
+				52B4AF12244D443E0001924D /* CheckData.swift in Sources */,
+				52B4AF1B244EEB460001924D /* ListToDoTableViewController.swift in Sources */,
+				52B4AF23244FF30E0001924D /* SettingViewController.swift in Sources */,
+				52B4AF1E244EEBE30001924D /* ListThings.swift in Sources */,
 				522B3748244B40D100DAC17C /* SceneDelegate.swift in Sources */,
+				526135DE244C523B00B00916 /* HomeViewController.swift in Sources */,
+				522B375A244C089600DAC17C /* Constant.swift in Sources */,
+				52B4AF0D244D390E0001924D /* User.swift in Sources */,
+				522B375D244C0ABE00DAC17C /* SignUpViewController.swift in Sources */,
+				526135DC244C4C8C00B00916 /* ExtensionController.swift in Sources */,
+				52B4AF17244EE5610001924D /* CustomCellListTableViewCell.swift in Sources */,
+				52B4633F2452D5AA006DA775 /* TabBarControllerViewController.swift in Sources */,
+				522B375F244C16EF00DAC17C /* StartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +458,7 @@
 		};
 		522B3757244B40D500DAC17C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B26141B27F493C04AFA67E1 /* Pods-RemindThings.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +477,7 @@
 		};
 		522B3758244B40D500DAC17C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9AF1B53BEB7E461B080B45B /* Pods-RemindThings.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -20,13 +20,28 @@ class StartViewController: UIViewController {
         super.viewDidLoad()
 
         animationLabel()
-        // Do any additional setup after loading the view.
+    }
+//    @IBAction func startPressed(_ sender: UIButton) {
+//        if K.Token.check == false{
+//         self.performSegue(withIdentifier: K.Segue.startToSignIn, sender: self)
+//        }
+//        else {
+//            self.performSegue(withIdentifier: K.Segue.startToHome, sender: self)
+//        }
+//
+//    }
+        
+    @IBAction func signUpPressed(_ sender: UIButton) {
+        let vc = self.storyboard?.instantiateViewController(identifier: K.ScreenName.signUp) as! SignUpViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+        
     }
     
-    @IBAction func startPressed(_ sender: UIButton) {
-//         self.performSegue(withIdentifier: K.Segue.StartToSignIn, sender: self)
+    @IBAction func signInPressed(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(identifier: K.ScreenName.signIn) as! SignInViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
-        
+    
     func animationLabel(){
         remindLabel.text = ""
         var charIndex = 0.0
@@ -37,7 +52,7 @@ class StartViewController: UIViewController {
             }
             charIndex += 1
         }
-    
+//    
     }
     }
     
